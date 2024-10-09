@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+#login-screen,
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 모든 input과 button에 대한 스타일에서 display와 width를 제거 */
+input,
+button {
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* 특정 영역의 input과 button에만 display와 width 적용 */
+#login-screen input,
+#login-screen button,
+#app > input[type="file"],
+#app > button {
+  display: block;
+  width: 100%;
+}
+
+.product-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.product-item img {
+  margin-top: 10px;
+}
+
+/* 상태별 필터 스타일 */
+.status-filter {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* 줄바꿈 허용 */
+}
+
+.status-filter .filter-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc; /* 테두리 추가 */
+  border-radius: 5px; /* 모서리 둥글게 */
+  padding: 10px; /* 내부 여백 추가 */
+  margin: 5px; /* 필터 옵션 사이의 간격 */
+  width: 100px; /* 너비 설정 */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.status-filter .filter-option label {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.status-filter .filter-option input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.status-filter .filter-option input[type="radio"]:checked {
+  background-color: #555;
+}
+
+/* 취소 버튼 스타일 */
+.cancel-button {
+  background-color: #ff4d4d; /* 빨간색 */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cancel-button i {
+  margin-right: 5px;
+}
+
+/* 완료 버튼 스타일 */
+.complete-button {
+  background-color: #4CAF50; /* 초록색 */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.complete-button i {
+  margin-right: 5px;
+}
+
+/* 일반 버튼 스타일 */
+button {
+  font-size: 14px;
+  display: inline-flex; /* 인라인 플렉스 요소로 설정 */
+  align-items: center;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+/* action-buttons 컨테이너 스타일 */
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: auto; /* 너비를 자동으로 설정 */
+}

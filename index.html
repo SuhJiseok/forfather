@@ -1,0 +1,73 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>상품 관리 웹 앱</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-yVrVtNlBb8dUnXD9sCe0AlmaV9Vg+SA3X7VQfVJ5k3P3YqEj7BZfzk0BxzYQc3+Yp9zpNkLxd9sFkaUAAjZ3ow=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  <!-- 로그인 화면 -->
+  <div id="login-screen">
+    <h1>로그인</h1>
+    <input type="text" id="username" placeholder="아이디" />
+    <input type="password" id="password" placeholder="비밀번호" />
+    <button id="login-button">로그인</button>
+  </div>
+
+  <!-- 메인 앱 화면 -->
+  <div id="app" style="display: none;">
+    <!-- 여기에 앱 내용이 들어갑니다 -->
+    <h2>상태별 필터</h2>
+<form id="status-filter-form" class="status-filter">
+  <div class="filter-option">
+    <label for="status-1">구매전</label>
+    <input type="radio" id="status-1" name="status-filter" value="구매전" checked />
+  </div>
+  <div class="filter-option">
+    <label for="status-2">구매완료</label>
+    <input type="radio" id="status-2" name="status-filter" value="구매완료" />
+  </div>
+  <div class="filter-option">
+    <label for="status-3">배송완료</label>
+    <input type="radio" id="status-3" name="status-filter" value="배송완료" />
+  </div>
+  <div class="filter-option">
+    <label for="status-4">납품완료</label>
+    <input type="radio" id="status-4" name="status-filter" value="납품완료" />
+  </div>
+  <div class="filter-option">
+    <label for="status-5">사진촬영완료</label>
+    <input type="radio" id="status-5" name="status-filter" value="사진촬영완료" />
+  </div>
+  <div class="filter-option">
+    <label for="status-6">전체보기</label>
+    <input type="radio" id="status-6" name="status-filter" value="" />
+  </div>
+</form>
+  <!-- 파일 업로드 -->
+  <h2>상품 리스트 업로드</h2>
+  <input type="file" id="file-input" accept=".xlsx, .xls" />
+  <button id="upload-button">업로드</button>
+
+  <!-- 상품 리스트 표시 -->
+  <h2>상품 리스트</h2>
+  <input type="text" id="search-input" placeholder="상품 검색" />
+  <button id="search-button">검색</button>
+  <div id="product-list"></div>
+
+  <button id="export-button">엑셀로 추출</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
